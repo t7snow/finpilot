@@ -1,0 +1,22 @@
+# 1 setup 
+## Tech Stack 
+1. Language C++20
+2. Frontend (TUI) FTXUI
+3. Backend Logic Qt6 (Qt Core QtNetwork)
+4. Build System (CMake)
+
+## Directory Situation 
+
+finpilot / 
+CMakeLists.txt
+src/
+main.cpp
+ui/
+data/
+utils/
+
+
+etc etc etc
+
+
+
