@@ -1,0 +1,5 @@
+/home/tuckersnow/projects/finpilot/build-dir/CMakeFiles/finpilot.dir
+/home/tuckersnow/projects/finpilot/build-dir/CMakeFiles/edit_cache.dir
+/home/tuckersnow/projects/finpilot/build-dir/CMakeFiles/rebuild_cache.dir
+/home/tuckersnow/projects/finpilot/build-dir/CMakeFiles/finpilot_autogen_timestamp_deps.dir
+/home/tuckersnow/projects/finpilot/build-dir/CMakeFiles/finpilot_autogen.dir
