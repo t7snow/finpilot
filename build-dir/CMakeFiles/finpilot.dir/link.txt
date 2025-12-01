@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o CMakeFiles/finpilot.dir/main.cpp.o -o finpilot  /usr/lib64/libQt6Core.so.6.9.3
