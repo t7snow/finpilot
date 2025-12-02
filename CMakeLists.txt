@@ -5,14 +5,10 @@ project(finpilot VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17) 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core)
-
+find_package(Qt6 REQUIRED COMPONENTS Widgets Core)
 qt_standard_project_setup()
 
-qt_add_executable(finpilot
-	main.cpp
-)
-
-target_link_libraries(finpilot PRIVATE Qt6::Core)
+add_subdirectory(src/app)
+target_link_libraries(finpilot PRIVATE Qt6::Core Qt6::Widgets)
 
 
