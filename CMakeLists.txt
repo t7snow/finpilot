@@ -9,6 +9,6 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets Core)
 qt_standard_project_setup()
 
 add_subdirectory(src/app)
-target_link_libraries(finpilot PRIVATE Qt6::Core Qt6::Widgets)
+
 
 
