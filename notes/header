@@ -1,0 +1,24 @@
+#ifndef NAME_H
+#define NAME_H
+
+#include 
+
+class MyObject : public QObject
+
+{
+	Q_OBECT
+
+public:
+	explicit MyObject(QObject *parent = nullptr);
+	~MyObject();
+};
+
+1. include guards - prevent from breaking if i include in same file twice ( if not defined yet define and run)
+2. includes
+3. oublic !Object : inheritance
+4. The QObject Macro -> triggers the MOC (Meta Object COmpiler) writes a moc_MyObject.cpp behind the scenes. Allows signals / slots to work 
+
+
+MOC: C++ is static language (forgets class names and shit once compiled) Qt needs information at run time for signals and slots.
+MOC Scans -> Looks for Q_OBJECT -> Creates new files->moc_cpp works by doing lokups , introspection, properties
+
