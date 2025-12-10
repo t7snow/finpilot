@@ -1,13 +1,15 @@
 #ifndef APP_H
 #define APP_H
 
-#include <FinPilotEngine>
+#include "finpilotengine.h"
+#include <QObject>
+ 
 class App : public QObject
 {
 	Q_OBJECT
 
 public: 
-	explicit App(QObject *parent = nullptr);
+	App(const QString &db_path, const QString &config_path, QObject *parent = nullptr);
 	~App();
 	void run();
 

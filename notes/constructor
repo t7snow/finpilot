@@ -1,0 +1,41 @@
+1. default constructor -> when no constructor is given
+
+2. parameterized constructor -> allows us to pass arguments to constructors, help intiializae membersconstructor sbody intializes things
+
+ A(int x) {
+        val = x;
+    }
+
+3. copy constructor another of the same class as an argument
+	so i would create an A and then send that in to make another A , basically a copy of it
+
+A(A& a) {
+        val = a.val;
+    }
+
+
+4. EXPLICIT -> always mark constructor as explicit if it takes one argument 
+	-> why? -> *immplicit conversion* which is bad for this
+
+// App.cpp
+App::App(QObject *parent)
+    : QObject(parent),        // 1. Initialize Base Class first
+      m_engine("data.csv"),   // 2. Initialize Engine with its own arguments
+      m_username("Guest"),    // 3. Initialize string
+      m_refreshRate(1000),    // 4. Initialize integer
+      m_isOnline(false)       // 5. Initialize boolean
+{
+    // The Constructor Body
+    // By the time you reach this curly brace, all variables above are 
+    // ALREADY created and ready to use.
+    
+    qDebug() << "App started for user:" << m_username;
+}
+
+this is intializing everyting in the .cpp
+the connect() go inside the constructor body. the : QObject(parent), m_engine() etc
+
+you put shit in the constructor when something is taken in to make it. Like the  
+
+App::App(QObject *parent) -> this is the actual argument thing
+: QObject(parent) -> this is setting the qobject to take in its parent

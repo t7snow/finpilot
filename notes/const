@@ -1,0 +1,12 @@
+#  & 
+
+c++ defaults to passing varaibles by value - making a photocopy of the data and sharing it
+& - gives the actual photo not the photocopy 
+
+# const
+
+look but dont touch 
+
+# const &
+
+speed and rpomises not to touch it
