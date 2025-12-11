@@ -16,7 +16,10 @@ public:
 	double getNetworth();
 	double getSavingsRate();
 	QList<double> getNetworthTrend();
-
+	
+	const IncomeAnalysis& income() const   { return m_income; }
+   	const ExpenseAnalysis& expense() const { return m_expense; }
+  	const PortfolioAnalysis& portfolio() const { return m_portfolio; }
 private:
 	FinancialData *m_data;
 	ExpenseAnalysis m_expense;

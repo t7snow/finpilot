@@ -1,13 +1,14 @@
-CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/mocs_compilation.cpp \
- /usr/include/stdc-predef.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_app.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../app.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../finpilotengine.h \
- /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
- /usr/include/qt6/QtCore/qobjectdefs.h \
- /usr/include/qt6/QtCore/qnamespace.h /usr/include/qt6/QtCore/qglobal.h \
- /usr/include/c++/15/type_traits \
+CMakeFiles/finpilot.dir/financialdata.cpp.o: \
+ /home/tuckersnow/projects/finpilot/src/core/financialdata.cpp \
+ /usr/include/stdc-predef.h /usr/include/qt6/QtCore/QList \
+ /usr/include/qt6/QtCore/qlist.h \
+ /usr/include/qt6/QtCore/qarraydatapointer.h \
+ /usr/include/qt6/QtCore/qarraydataops.h \
+ /usr/include/qt6/QtCore/qarraydata.h /usr/include/qt6/QtCore/qpair.h \
+ /usr/include/qt6/QtCore/qcontainerfwd.h \
+ /usr/include/qt6/QtCore/qtconfigmacros.h \
+ /usr/include/qt6/QtCore/qtconfiginclude.h /usr/include/c++/15/version \
+ /usr/include/c++/15/bits/version.h \
  /usr/include/c++/15/aarch64-redhat-linux/bits/c++config.h \
  /usr/include/c++/15/aarch64-redhat-linux/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -15,38 +16,35 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-lp64.h \
  /usr/include/c++/15/aarch64-redhat-linux/bits/cpu_defines.h \
- /usr/include/c++/15/pstl/pstl_config.h \
- /usr/include/c++/15/bits/version.h /usr/include/c++/15/cstddef \
+ /usr/include/c++/15/pstl/pstl_config.h /usr/include/qt6/QtCore/qconfig.h \
+ /usr/include/qt6/QtCore/qtcore-config.h \
+ /usr/include/qt6/QtCore/qtdeprecationdefinitions.h \
+ /usr/include/qt6/QtCore/qcompilerdetection.h \
+ /usr/include/qt6/QtCore/qprocessordetection.h \
+ /usr/include/qt6/QtCore/qsystemdetection.h /usr/include/c++/15/utility \
+ /usr/include/c++/15/bits/stl_relops.h \
+ /usr/include/c++/15/bits/stl_pair.h /usr/include/c++/15/type_traits \
+ /usr/include/c++/15/bits/move.h /usr/include/c++/15/bits/utility.h \
+ /usr/include/c++/15/initializer_list \
+ /usr/include/qt6/QtCore/qtversionchecks.h /usr/include/assert.h \
+ /usr/include/qt6/QtCore/qtypes.h /usr/include/qt6/QtCore/qassert.h \
+ /usr/include/qt6/QtCore/qtcoreexports.h \
+ /usr/include/qt6/QtCore/qtdeprecationmarkers.h \
+ /usr/include/qt6/QtCore/qtclasshelpermacros.h \
+ /usr/include/qt6/QtCore/qtnoop.h /usr/include/c++/15/cstddef \
  /usr/lib/gcc/aarch64-redhat-linux/15/include/stddef.h \
- /usr/include/c++/15/utility /usr/include/c++/15/bits/stl_relops.h \
- /usr/include/c++/15/bits/stl_pair.h /usr/include/c++/15/bits/move.h \
- /usr/include/c++/15/bits/utility.h /usr/include/c++/15/initializer_list \
  /usr/include/c++/15/cstdint \
  /usr/lib/gcc/aarch64-redhat-linux/15/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/assert.h \
+ /usr/include/bits/stdint-least.h /usr/include/c++/15/limits \
+ /usr/include/qt6/QtCore/qglobal.h \
  /usr/lib/gcc/aarch64-redhat-linux/15/include/stdbool.h \
  /usr/include/qt6/QtCore/qtcoreglobal.h \
- /usr/include/qt6/QtCore/qtversionchecks.h \
- /usr/include/qt6/QtCore/qtconfiginclude.h /usr/include/c++/15/version \
- /usr/include/qt6/QtCore/qconfig.h \
- /usr/include/qt6/QtCore/qtcore-config.h \
- /usr/include/qt6/QtCore/qtconfigmacros.h \
- /usr/include/qt6/QtCore/qtdeprecationdefinitions.h \
- /usr/include/qt6/QtCore/qcompilerdetection.h \
- /usr/include/qt6/QtCore/qprocessordetection.h \
- /usr/include/qt6/QtCore/qsystemdetection.h \
- /usr/include/qt6/QtCore/qtcoreexports.h \
- /usr/include/qt6/QtCore/qtdeprecationmarkers.h \
- /usr/include/qt6/QtCore/qtclasshelpermacros.h \
  /usr/include/qt6/QtCore/qtpreprocessorsupport.h \
- /usr/include/qt6/QtCore/qassert.h /usr/include/qt6/QtCore/qtnoop.h \
- /usr/include/qt6/QtCore/qtypes.h /usr/include/qt6/QtCore/qtversion.h \
- /usr/include/qt6/QtCore/qtypeinfo.h \
- /usr/include/qt6/QtCore/qcontainerfwd.h /usr/include/c++/15/limits \
+ /usr/include/qt6/QtCore/qtversion.h /usr/include/qt6/QtCore/qtypeinfo.h \
  /usr/include/qt6/QtCore/qsysinfo.h /usr/include/qt6/QtCore/qlogging.h \
  /usr/include/qt6/QtCore/qflags.h /usr/include/qt6/QtCore/qcompare_impl.h \
  /usr/include/c++/15/algorithm /usr/include/c++/15/bits/stl_algobase.h \
@@ -138,49 +136,24 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qtenvironmentvariables.h \
  /usr/include/qt6/QtCore/qtresource.h \
  /usr/include/qt6/QtCore/qttranslation.h \
- /usr/include/qt6/QtCore/qversiontagging.h \
- /usr/include/qt6/QtCore/qcompare.h \
- /usr/include/qt6/QtCore/qstdlibdetection.h \
- /usr/include/qt6/QtCore/qcomparehelpers.h \
- /usr/include/qt6/QtCore/q20type_traits.h /usr/include/c++/15/functional \
- /usr/include/c++/15/bits/stl_function.h \
- /usr/include/c++/15/backward/binders.h \
- /usr/include/c++/15/bits/refwrap.h \
- /usr/include/c++/15/bits/std_function.h \
- /usr/include/c++/15/unordered_map \
- /usr/include/c++/15/bits/unordered_map.h \
- /usr/include/c++/15/bits/hashtable.h \
- /usr/include/c++/15/bits/hashtable_policy.h \
- /usr/include/c++/15/ext/alloc_traits.h \
- /usr/include/c++/15/bits/alloc_traits.h \
- /usr/include/c++/15/bits/memoryfwd.h \
- /usr/include/c++/15/bits/allocator.h \
- /usr/include/c++/15/aarch64-redhat-linux/bits/c++allocator.h \
- /usr/include/c++/15/bits/new_allocator.h \
- /usr/include/c++/15/bits/node_handle.h \
- /usr/include/c++/15/bits/range_access.h \
- /usr/include/c++/15/bits/erase_if.h \
- /usr/include/c++/15/bits/memory_resource.h \
- /usr/include/c++/15/bits/uses_allocator_args.h \
- /usr/include/c++/15/vector /usr/include/c++/15/bits/stl_uninitialized.h \
- /usr/include/c++/15/bits/stl_vector.h \
- /usr/include/c++/15/bits/stl_bvector.h \
- /usr/include/c++/15/bits/vector.tcc /usr/include/c++/15/array \
- /usr/include/c++/15/compare /usr/include/qt6/QtCore/qtmetamacros.h \
- /usr/include/qt6/QtCore/qobjectdefs_impl.h \
- /usr/include/qt6/QtCore/qfunctionaltools_impl.h \
- /usr/include/c++/15/memory \
- /usr/include/c++/15/bits/stl_raw_storage_iter.h \
- /usr/include/c++/15/bits/align.h /usr/include/c++/15/bits/unique_ptr.h \
- /usr/include/c++/15/bits/shared_ptr.h /usr/include/c++/15/iosfwd \
- /usr/include/c++/15/bits/stringfwd.h /usr/include/c++/15/bits/postypes.h \
+ /usr/include/qt6/QtCore/qversiontagging.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/qt6/QtCore/qcontainertools_impl.h \
+ /usr/include/qt6/QtCore/qxptype_traits.h \
+ /usr/include/qt6/QtCore/q20type_traits.h /usr/include/c++/15/cstring \
+ /usr/include/c++/15/iterator /usr/include/c++/15/bits/stream_iterator.h \
+ /usr/include/c++/15/iosfwd /usr/include/c++/15/bits/stringfwd.h \
+ /usr/include/c++/15/bits/memoryfwd.h /usr/include/c++/15/bits/postypes.h \
  /usr/include/c++/15/cwchar /usr/include/wchar.h \
  /usr/lib/gcc/aarch64-redhat-linux/15/include/stdarg.h \
  /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h \
- /usr/include/c++/15/bits/shared_ptr_base.h \
- /usr/include/c++/15/bits/allocated_ptr.h \
+ /usr/include/c++/15/bits/streambuf_iterator.h \
+ /usr/include/c++/15/streambuf /usr/include/c++/15/bits/localefwd.h \
+ /usr/include/c++/15/aarch64-redhat-linux/bits/c++locale.h \
+ /usr/include/c++/15/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/15/cctype \
+ /usr/include/ctype.h /usr/include/c++/15/bits/ios_base.h \
  /usr/include/c++/15/ext/atomicity.h \
  /usr/include/c++/15/aarch64-redhat-linux/bits/gthr.h \
  /usr/include/c++/15/aarch64-redhat-linux/bits/gthr-default.h \
@@ -198,31 +171,21 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
  /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/c++/15/aarch64-redhat-linux/bits/atomic_word.h \
- /usr/include/sys/single_threaded.h /usr/include/c++/15/ext/concurrence.h \
- /usr/include/c++/15/bits/shared_ptr_atomic.h \
- /usr/include/c++/15/backward/auto_ptr.h \
- /usr/include/c++/15/pstl/glue_memory_defs.h \
- /usr/include/qt6/QtCore/qstring.h /usr/include/qt6/QtCore/qchar.h \
- /usr/include/qt6/QtCore/qstringview.h \
- /usr/include/qt6/QtCore/qbytearray.h /usr/include/qt6/QtCore/qrefcount.h \
- /usr/include/qt6/QtCore/qarraydata.h /usr/include/qt6/QtCore/qpair.h \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/qt6/QtCore/qarraydatapointer.h \
- /usr/include/qt6/QtCore/qarraydataops.h \
- /usr/include/qt6/QtCore/qcontainertools_impl.h \
- /usr/include/qt6/QtCore/qxptype_traits.h /usr/include/c++/15/cstring \
- /usr/include/c++/15/iterator /usr/include/c++/15/bits/stream_iterator.h \
- /usr/include/c++/15/bits/streambuf_iterator.h \
- /usr/include/c++/15/streambuf /usr/include/c++/15/bits/localefwd.h \
- /usr/include/c++/15/aarch64-redhat-linux/bits/c++locale.h \
- /usr/include/c++/15/clocale /usr/include/locale.h \
- /usr/include/bits/locale.h /usr/include/c++/15/cctype \
- /usr/include/ctype.h /usr/include/c++/15/bits/ios_base.h \
+ /usr/include/sys/single_threaded.h \
  /usr/include/c++/15/bits/locale_classes.h /usr/include/c++/15/string \
  /usr/include/c++/15/bits/char_traits.h \
+ /usr/include/c++/15/bits/allocator.h \
+ /usr/include/c++/15/aarch64-redhat-linux/bits/c++allocator.h \
+ /usr/include/c++/15/bits/new_allocator.h \
  /usr/include/c++/15/bits/ostream_insert.h \
  /usr/include/c++/15/bits/cxxabi_forced.h \
- /usr/include/c++/15/bits/basic_string.h /usr/include/c++/15/string_view \
+ /usr/include/c++/15/bits/stl_function.h \
+ /usr/include/c++/15/backward/binders.h \
+ /usr/include/c++/15/bits/refwrap.h \
+ /usr/include/c++/15/bits/range_access.h \
+ /usr/include/c++/15/bits/basic_string.h \
+ /usr/include/c++/15/ext/alloc_traits.h \
+ /usr/include/c++/15/bits/alloc_traits.h /usr/include/c++/15/string_view \
  /usr/include/c++/15/bits/string_view.tcc \
  /usr/include/c++/15/ext/string_conversions.h /usr/include/c++/15/cstdio \
  /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
@@ -235,12 +198,42 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/bits/types/error_t.h /usr/include/c++/15/bits/charconv.h \
  /usr/include/c++/15/bits/basic_string.tcc \
+ /usr/include/c++/15/bits/memory_resource.h \
+ /usr/include/c++/15/bits/uses_allocator_args.h \
  /usr/include/c++/15/bits/locale_classes.tcc \
  /usr/include/c++/15/system_error \
  /usr/include/c++/15/aarch64-redhat-linux/bits/error_constants.h \
  /usr/include/c++/15/stdexcept /usr/include/c++/15/bits/streambuf.tcc \
+ /usr/include/c++/15/memory /usr/include/c++/15/bits/stl_uninitialized.h \
+ /usr/include/c++/15/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/15/bits/align.h /usr/include/c++/15/bits/unique_ptr.h \
+ /usr/include/c++/15/bits/shared_ptr.h \
+ /usr/include/c++/15/bits/shared_ptr_base.h \
+ /usr/include/c++/15/bits/allocated_ptr.h \
+ /usr/include/c++/15/ext/concurrence.h \
+ /usr/include/c++/15/bits/shared_ptr_atomic.h \
+ /usr/include/c++/15/backward/auto_ptr.h \
+ /usr/include/c++/15/pstl/glue_memory_defs.h \
+ /usr/include/qt6/QtCore/qnamespace.h /usr/include/qt6/QtCore/qcompare.h \
+ /usr/include/qt6/QtCore/qstdlibdetection.h \
+ /usr/include/qt6/QtCore/qcomparehelpers.h /usr/include/c++/15/functional \
+ /usr/include/c++/15/bits/std_function.h \
+ /usr/include/c++/15/unordered_map \
+ /usr/include/c++/15/bits/unordered_map.h \
+ /usr/include/c++/15/bits/hashtable.h \
+ /usr/include/c++/15/bits/hashtable_policy.h \
+ /usr/include/c++/15/bits/node_handle.h \
+ /usr/include/c++/15/bits/erase_if.h /usr/include/c++/15/vector \
+ /usr/include/c++/15/bits/stl_vector.h \
+ /usr/include/c++/15/bits/stl_bvector.h \
+ /usr/include/c++/15/bits/vector.tcc /usr/include/c++/15/array \
+ /usr/include/c++/15/compare /usr/include/qt6/QtCore/qtmetamacros.h \
  /usr/include/qt6/QtCore/q20functional.h \
  /usr/include/qt6/QtCore/q20memory.h /usr/include/qt6/QtCore/q17memory.h \
+ /usr/include/qt6/QtCore/qhashfunctions.h \
+ /usr/include/qt6/QtCore/qstring.h /usr/include/qt6/QtCore/qchar.h \
+ /usr/include/qt6/QtCore/qstringview.h \
+ /usr/include/qt6/QtCore/qbytearray.h /usr/include/qt6/QtCore/qrefcount.h \
  /usr/include/qt6/QtCore/qbytearrayalgorithms.h \
  /usr/include/qt6/QtCore/qbytearrayview.h \
  /usr/include/qt6/QtCore/qstringfwd.h /usr/include/c++/15/stdlib.h \
@@ -253,14 +246,18 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qstringbuilder.h \
  /usr/include/qt6/QtCore/qstringconverter.h \
  /usr/include/qt6/QtCore/qstringconverter_base.h \
- /usr/include/qt6/QtCore/qlist.h /usr/include/qt6/QtCore/qhashfunctions.h \
  /usr/include/c++/15/numeric /usr/include/c++/15/bits/stl_numeric.h \
  /usr/include/c++/15/pstl/glue_numeric_defs.h \
  /usr/include/qt6/QtCore/qiterator.h \
- /usr/include/qt6/QtCore/qbytearraylist.h \
+ /usr/include/qt6/QtCore/qbytearraylist.h /usr/include/qt6/QtCore/qlist.h \
  /usr/include/qt6/QtCore/qstringlist.h \
  /usr/include/qt6/QtCore/qalgorithms.h \
  /usr/include/qt6/QtCore/qstringmatcher.h \
+ /home/tuckersnow/projects/finpilot/src/core/financialdata.h \
+ /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
+ /usr/include/qt6/QtCore/qobjectdefs.h \
+ /usr/include/qt6/QtCore/qobjectdefs_impl.h \
+ /usr/include/qt6/QtCore/qfunctionaltools_impl.h \
  /usr/include/qt6/QtCore/qscopedpointer.h \
  /usr/include/qt6/QtCore/qmetatype.h \
  /usr/include/qt6/QtCore/qdatastream.h \
@@ -279,11 +276,8 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qobject_impl.h \
  /usr/include/qt6/QtCore/qbindingstorage.h /usr/include/c++/15/chrono \
  /usr/include/c++/15/bits/chrono.h /usr/include/c++/15/ratio \
- /usr/include/c++/15/ctime /usr/include/qt6/QtCore/QString \
- /usr/include/qt6/QtCore/qstring.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../dataloader.h \
- /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/qlist.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../financialtypes.h \
+ /usr/include/c++/15/ctime \
+ /home/tuckersnow/projects/finpilot/src/core/financialtypes.h \
  /usr/include/qt6/QtCore/QDate /usr/include/qt6/QtCore/qdatetime.h \
  /usr/include/qt6/QtCore/qcalendar.h /usr/include/qt6/QtCore/qlocale.h \
  /usr/include/qt6/QtCore/qvariant.h /usr/include/qt6/QtCore/qdebug.h \
@@ -305,20 +299,4 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qset.h /usr/include/qt6/QtCore/qhash.h \
  /usr/include/qt6/QtCore/qvarlengtharray.h \
  /usr/include/qt6/QtCore/q23utility.h \
- /usr/include/qt6/QtCore/q20utility.h /usr/include/qt6/QtCore/qobject.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../financialdata.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../dataanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../expenseanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../portfolioanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../incomeanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../datavisualization.h \
- /usr/include/qt6/QtCore/qtmochelpers.h \
- /usr/include/qt6/QtCore/qtmocconstants.h \
- /usr/include/qt6/QtCore/q20algorithm.h \
- /usr/include/qt6/QtCore/q23type_traits.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_dataloader.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../dataloader.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_financialdata.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../financialdata.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_finpilotengine.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../finpilotengine.h
+ /usr/include/qt6/QtCore/q20utility.h /usr/include/qt6/QtCore/qobject.h

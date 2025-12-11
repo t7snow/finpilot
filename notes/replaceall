@@ -1,0 +1,6 @@
+:%s/old_word/new_word/g
+
+% - selects the entire file
+s is substitution 
+g stands for glbal whole file
+

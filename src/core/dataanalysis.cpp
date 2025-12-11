@@ -13,13 +13,16 @@ DataAnalysis::~DataAnalysis()
 
 double DataAnalysis::getNetworth()
 {
+    return 0.0;
 }
 
 double DataAnalysis::getSavingsRate()
 {
+    return 0.0;
 }
 
 QList<double> DataAnalysis::getNetworthTrend()
 {
+    return QList<double>();
 }
 

@@ -1,9 +1,8 @@
-CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/mocs_compilation.cpp \
+CMakeFiles/finpilot.dir/datavisualization.cpp.o: \
+ /home/tuckersnow/projects/finpilot/src/core/datavisualization.cpp \
  /usr/include/stdc-predef.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_app.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../app.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../finpilotengine.h \
+ /home/tuckersnow/projects/finpilot/src/core/datavisualization.h \
+ /home/tuckersnow/projects/finpilot/src/core/financialdata.h \
  /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
  /usr/include/qt6/QtCore/qobjectdefs.h \
  /usr/include/qt6/QtCore/qnamespace.h /usr/include/qt6/QtCore/qglobal.h \
@@ -279,11 +278,9 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qobject_impl.h \
  /usr/include/qt6/QtCore/qbindingstorage.h /usr/include/c++/15/chrono \
  /usr/include/c++/15/bits/chrono.h /usr/include/c++/15/ratio \
- /usr/include/c++/15/ctime /usr/include/qt6/QtCore/QString \
- /usr/include/qt6/QtCore/qstring.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../dataloader.h \
- /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/qlist.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../financialtypes.h \
+ /usr/include/c++/15/ctime /usr/include/qt6/QtCore/QList \
+ /usr/include/qt6/QtCore/qlist.h \
+ /home/tuckersnow/projects/finpilot/src/core/financialtypes.h \
  /usr/include/qt6/QtCore/QDate /usr/include/qt6/QtCore/qdatetime.h \
  /usr/include/qt6/QtCore/qcalendar.h /usr/include/qt6/QtCore/qlocale.h \
  /usr/include/qt6/QtCore/qvariant.h /usr/include/qt6/QtCore/qdebug.h \
@@ -305,20 +302,4 @@ CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qset.h /usr/include/qt6/QtCore/qhash.h \
  /usr/include/qt6/QtCore/qvarlengtharray.h \
  /usr/include/qt6/QtCore/q23utility.h \
- /usr/include/qt6/QtCore/q20utility.h /usr/include/qt6/QtCore/qobject.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../financialdata.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../dataanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../expenseanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../portfolioanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../incomeanalysis.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../datavisualization.h \
- /usr/include/qt6/QtCore/qtmochelpers.h \
- /usr/include/qt6/QtCore/qtmocconstants.h \
- /usr/include/qt6/QtCore/q20algorithm.h \
- /usr/include/qt6/QtCore/q23type_traits.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_dataloader.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../dataloader.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_financialdata.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../financialdata.h \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/moc_finpilotengine.cpp \
- /home/tuckersnow/projects/finpilot/src/core/finpilot_autogen/EWIEGA46WW/../../finpilotengine.h
+ /usr/include/qt6/QtCore/q20utility.h /usr/include/qt6/QtCore/qobject.h

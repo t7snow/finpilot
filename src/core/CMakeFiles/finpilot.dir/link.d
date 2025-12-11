@@ -5,7 +5,16 @@ finpilot: \
   CMakeFiles/finpilot.dir/finpilot_autogen/mocs_compilation.cpp.o \
   CMakeFiles/finpilot.dir/main.cpp.o \
   CMakeFiles/finpilot.dir/app.cpp.o \
+  CMakeFiles/finpilot.dir/finpilotengine.cpp.o \
+  CMakeFiles/finpilot.dir/dataanalysis.cpp.o \
+  CMakeFiles/finpilot.dir/dataloader.cpp.o \
+  CMakeFiles/finpilot.dir/datavisualization.cpp.o \
+  CMakeFiles/finpilot.dir/expenseanalysis.cpp.o \
+  CMakeFiles/finpilot.dir/financialdata.cpp.o \
+  CMakeFiles/finpilot.dir/incomeanalysis.cpp.o \
+  CMakeFiles/finpilot.dir/portfolioanalysis.cpp.o \
   /usr/lib64/libQt6Widgets.so.6.9.3 \
+  /usr/lib64/libQt6Sql.so.6.9.3 \
   /usr/lib64/libQt6Gui.so.6.9.3 \
   /usr/lib64/libGLX.so \
   /usr/lib64/libOpenGL.so \
@@ -83,7 +92,25 @@ CMakeFiles/finpilot.dir/main.cpp.o:
 
 CMakeFiles/finpilot.dir/app.cpp.o:
 
+CMakeFiles/finpilot.dir/finpilotengine.cpp.o:
+
+CMakeFiles/finpilot.dir/dataanalysis.cpp.o:
+
+CMakeFiles/finpilot.dir/dataloader.cpp.o:
+
+CMakeFiles/finpilot.dir/datavisualization.cpp.o:
+
+CMakeFiles/finpilot.dir/expenseanalysis.cpp.o:
+
+CMakeFiles/finpilot.dir/financialdata.cpp.o:
+
+CMakeFiles/finpilot.dir/incomeanalysis.cpp.o:
+
+CMakeFiles/finpilot.dir/portfolioanalysis.cpp.o:
+
 /usr/lib64/libQt6Widgets.so.6.9.3:
+
+/usr/lib64/libQt6Sql.so.6.9.3:
 
 /usr/lib64/libQt6Gui.so.6.9.3:
 

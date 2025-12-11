@@ -1,0 +1,4 @@
+1. use QFile to bring the file in and make sure to open it to read only
+2. use a QTextStream in(&file) to use a text stream. lets u do like << and shit
+3. in.atEnd, read line then add then reapeatsa
+
