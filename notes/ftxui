@@ -1,0 +1,16 @@
+# ftxui
+
+## how to install - 
+include(FetchContent)
+
+FetchContent_Declare(ftxui
+	GIT_REPOSITORY x
+	GIT_TAG v5.0.0
+)
+
+FetchContent_MakeAvailable(ftxui)
+
+target_link ...
+	ftxui::screen
+	ftxui::dom
+	ftcui::component

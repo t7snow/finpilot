@@ -3,6 +3,13 @@
 
 #include <QDate> 
 
+enum class IncomeMetric {
+	NetPay,
+	GrossPay,
+	Deduction,
+	Tax
+};
+
 enum class Granularity {
 	Daily,
 	Weekly,

@@ -18,8 +18,11 @@ void FinPilotEngine::initialize(const QString &file_path)
 	DateRange date;
 	date.start = QDate(2021,12,31);
 	date.end = QDate(2030,12,31);
-	qInfo() << m_analyzer.income().getTotalIncome(date, "test");
-	qInfo() << m_analyzer.income().getYoYAverageIncome(date, "test");
+	qInfo() << m_analyzer.income().getTotal(date, IncomeMetric::NetPay);
+	qInfo() << m_analyzer.income().getAverage(date, Granularity::Yearly, IncomeMetric::NetPay);
+
+	
+
 }
 
 void FinPilotEngine::loadData()

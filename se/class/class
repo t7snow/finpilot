@@ -1,0 +1,240 @@
+---
+config:
+  layout: dagre
+  theme: neo-dark
+---
+classDiagram
+direction TB
+    class DataAnalysis {
+	    +ExpenseAnalysis m_expense
+	    +IncomeAnalysis m_income
+	    +PortfolioAnalysis m_portfolio
+	    +DataAnalysis(FinancialData *data)
+	    +getNetworth() double
+	    +getSavingsRate() double
+	    +getNetworthTrend() ~vector~double
+    
+		+income() IncomeAnalysis&
+		+expense() ExpenseAnalysis&
+		+portfolio() PortfolioAnalysis&
+
+		-FinancialData *m_data
+		-ExpenseAnalysis m_expense
+		-IncomeAnalysis m_income
+		-PortfolioAnalysis m_portfolio
+	}
+
+    class ExpenseAnalysis {
+	    -FinancialData* m_expense_data
+	    +getAverage(DateRange range, const string& category = "") double
+	    +getTotalSpend(DateRange range, const string& category = "") double
+	    +getExpenses(Size size, DateRange range, const string& category = "") ExpenseEntry
+	    +getExpensesForRange(DateRange range, const string& category = "") vector~ExpenseEntry~
+	    +getRangeAverage(DateRange range, const string& category = "") vector~ExpenseEntry~
+	    +getBurnRate(DateRange range, const string& category = "") double
+	    +getProjectedSpend(DateRange range, const string& category = "") vector~double~
+	    +getAccelerationRate(DateRange range, const string& category = "") double
+	    +getSpendingVolatility(DateRange range, const string& category = "") double
+	    +getRangeGrowth(DateRange range, , const string& category = "") double
+    }
+
+    class IncomeAnalysis {
+	    -FinancialData* m_income_data
+	    +getTotalIncome(DateRange range, const string& source = "") double
+	    +getAverageIncome(DateRange range, const string& source = "") double
+	    +getLargestPaycheck(DateRange range) IncomeEntry
+	    +getEffectiveTaxRate(DateRange range) double
+	    +getGrossVsNet(DateRange range) pair~double,double~
+	    +getIncomeTrend(DateRange range, const string& source = "") vector~double~
+	    +getProjectedIncome(DateRange range, const string& source = "") vector~double~
+	    +getGrowthRate(DateRange range, const string& source = "") double
+	    +getIncomeStabilityScore(DateRange range) double
+	    +getIncomeForRange(DateRange range, const string& source = "") vector~IncomeEntry~
+    }
+
+    class PortfolioAnalysis {
+	    -FinancialData* m_portfolio_data
+	    +getTotalValue(DateRange range) double
+	    +getReturnOnInvestment(DateRange range) double
+	    +getCAGR(DateRange range) double
+	    +getSharpeRatio(double riskFreeRate) double
+	    +getAssetAllocation() map~string, double~
+	    +getSectorAllocation() map~string, double~
+	    +getDividendsReceived(DateRange range) double
+	    +getBeta(string benchmarkTicker) double
+    }
+
+    class DataLoader {
+		+DataLoader(FinancialData *data, QObject *parent)
+		+~DataLoader()
+	    +parseExpenses(const QString& file_path) voi
+	    +parseIncome(const QString& file_path) void
+	    +parsePortfolio(const QString& file_path) void
+
+		-FinancialData *m_data
+    }
+
+    class DataVisualization {
+	    +graph()
+    }
+
+	class FinancialTypes {
+        <<Namespace>>
+    }
+
+    FinancialTypes *-- DateRange
+    FinancialTypes *-- ExpenseEntry
+    FinancialTypes *-- IncomeEntry
+    FinancialTypes *-- PortfolioEntry
+    DateRange ..> Granularity : uses
+
+    class Granularity {
+        <<enumeration>>
+        Monthly
+        Weekly
+        Yearly
+    }
+
+    class DateRange {
+        +QDate start_date
+        +Granularity grain
+        +calculateOffset(QDate date) int
+    }
+    note for DateRange "calculateOffset Logic:\nif Monthly: (d.yr - s.yr)*12 + (d.mo - s.mo)\nif Weekly: start.daysTo(d) / 7\nif Yearly: d.yr - s.yr\nElse: start.daysTo(d)"
+
+    class ExpenseEntry {
+        +QDate date
+        +QString item
+        +QString vendor
+        +QString category
+        +QString subcategory
+        +QString payment_method
+        +double amount
+        +QString notes
+    }
+
+    class IncomeEntry {
+        +QDate date
+        +QString source
+        +double gross_pay
+        +double deduction
+        +double netpay
+    }
+
+    class PortfolioEntry {
+        +QString brokerage
+        +QString type
+        +QString investment_type
+        +QString general_type
+        +QString ticker
+        +QString full_ticker_name
+        +QString georgraphic_type
+        +double shares_owned
+        +double current_price
+        +double market_value
+        +double change
+    }
+
+    class DateRange {
+	    +start QDate
+	    +end QDate
+    }
+
+    class ExpenseEntry {
+	    +QDate date
+	    +QString item
+	    +QString vendor
+	    +QString category
+	    +QString subcategory
+	    +QString payment_method
+	    +double amount
+	    +QString notes
+    }
+
+    class IncomeEntry {
+	    +QDate date
+	    +QString source
+	    +double gross_pay
+	    +double deduction
+	    +double netpay
+    }
+
+    class PortfolioEntry {
+	    +QString brokerage
+	    +QString type
+	    +QString investment_type
+	    +QString general_type
+	    +QString ticker
+	    +QString full_ticker_name
+	    +QString georgraphic_type
+	    +double shares_owned
+	    +double current_price
+	    +double market_value
+	    +double change
+    }
+
+    class App {
+	    -FinPilotEngine m_engine
+	    +Run()
+	    +displayMenu()
+	    +handleUserInput()
+    }
+
+    class FinPilotEngine {
+		-QString m_db_path
+		-QString m_config_path
+		-FinancialData m_data
+		-DataLoader m_loader
+		-DataAnalysis m_analyzer
+		-DataVisualization m_visualizer
+
+		+FinPilotEngine(const QString &db_path, const QString &config_path, QObject *parent)
+		+~FinPilotEngine()
+		+intialize(const QString &file_path) void
+		+loadData() void
+		+processAnalysis() void
+		+renderDashboard() void
+    }
+
+	class FinancialData {
+        -QList~ExpenseEntry~ m_expenses
+        -QList~IncomeEntry~ m_income
+        -QList~PortfolioEntry~ m_portfolio
+
+        +FinancialData(QObject* parent)
+
+        +clear()
+        +addEntry(entry: ExpenseEntry)
+        +addEntry(entry: IncomeEntry)
+        +addEntry(entry: PortfolioEntry)
+        +getExpenses() QList~ExpenseEntry~
+        +getIncome() QList~IncomeEntry~
+        +getPortfolio() QList~PortfolioEntry~
+
+        +dataChanged()
+    }
+
+    FinancialData ..> ExpenseEntry : manages
+    FinancialData ..> IncomeEntry : manages
+    FinancialData ..> PortfolioEntry : manages
+ 
+
+    App *-- FinPilotEngine
+    FinPilotEngine *-- DataLoader
+    FinPilotEngine *-- DataAnalysis
+    FinPilotEngine *-- DataVisualization
+    DataAnalysis *-- ExpenseAnalysis
+    DataAnalysis *-- IncomeAnalysis
+    DataAnalysis *-- PortfolioAnalysis
+    FinancialData *-- FinancialTypes
+    FinancialTypes *-- ExpenseEntry
+    FinancialTypes *-- IncomeEntry
+    FinancialTypes *-- PortfolioEntry
+    FinancialTypes *-- DateRange
+    DataLoader ..> FinancialData : Creates
+    DataAnalysis ..> FinancialData : Consumes
+    DataVisualization ..> DataAnalysis : Visualizes
+    IncomeAnalysis --> FinancialData
+    ExpenseAnalysis --> FinancialData
+    PortfolioAnalysis --> FinancialData
+    DataAnalysis -- UntitledClass

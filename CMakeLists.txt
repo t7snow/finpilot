@@ -6,6 +6,16 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets Core)
+
+include(FetchContent)
+
+FetchContent_Declare(ftxui
+	GIT_REPOSITORY https://github.com/ArthurSonzogni/FTXUI
+	GIT_TAG v5.0.0
+)
+FetchContent_MakeAvailable(ftxui)
+
+
 qt_standard_project_setup()
 
 add_subdirectory(src/core)
