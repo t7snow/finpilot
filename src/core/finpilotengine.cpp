@@ -10,31 +10,34 @@ FinPilotEngine::FinPilotEngine(const QString &db_path, const QString &config_pat
 
 FinPilotEngine::~FinPilotEngine()
 {
+	m_screen.Exit(); 
+  if (m_ui_thread.joinable()) {
+      m_ui_thread.join(); 
+  }
 }
 //TODO: make it so the shits are member variables
 void FinPilotEngine::initialize(const QString &file_path)
 {
 
-	 auto screen = ftxui::ScreenInteractive::Fullscreen();
-    auto root = ui::Dashboard(&m_analyzer);
+	m_loader.parseIncome(file_path);
+	m_ui_root = ui::Dashboard(&m_analyzer);
+	m_ui_thread = std::thread([this]() {
+		m_screen.Loop(m_ui_root);
+	});
 
-    std::thread qt_thread([&]() {
-        screen.Loop(root);
+	m_refresh_timer = new QTimer(this);
+	connect(m_refresh_timer, &QTimer::timeout, this, [this]() {
+        m_screen.Post(ftxui::Event::Custom); 
     });
-
-    QTimer timer;
-    QObject::connect(&timer, &QTimer::timeout, [&]() {
-        screen.PostEvent(ftxui::Event::Custom); 
-    });
-    timer.start(1000);
+  m_refresh_timer->start(16);
 
 
-	m_loader.parseIncome(file_path);	
-	DateRange date;
-	date.start = QDate(2021,12,31);
-	date.end = QDate(2030,12,31);
-	qInfo() << m_analyzer.income().getTotal(date, IncomeMetric::NetPay);
-	qInfo() << m_analyzer.income().getAverage(date, Granularity::Yearly, IncomeMetric::NetPay);
+	// m_loader.parseIncome(file_path);	
+	// DateRange date;
+	// date.start = QDate(2021,12,31);
+	// date.end = QDate(2030,12,31);
+	// qInfo() << m_analyzer.income().getTotal(date, IncomeMetric::NetPay);
+	// qInfo() << m_analyzer.income().getAverage(date, Granularity::Yearly, IncomeMetric::NetPay);
 	// qInfo() << m_analyzer.income().getIncomeForRange(date);
 
 	

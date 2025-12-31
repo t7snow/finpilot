@@ -1,11 +1,17 @@
-#include <ftxui/dom/elements.hpp>
-#include <ftxui/component/component.hpp>
-#include "dashboard.hpp"
-#include "src/core/dataanalysis.h"
-namespace ui {
-    using namespace ftxui;
+#ifdef VISUALS_H
+#define VISUALS_H
 
-    ftxui::Component Dashboard(DataAnalysis *data_analyzer) {
+
+namespace ui {
+  using namespace ftxui;
+
+  ftxui::Component NetworthView(double networth){
+    return Renderer([networth]{
+      return window(text("Networth"), text("$" + std::to_string(networth)));
+    });
+  }
+
+  ftxui::Component Dashboard(DataAnalysis *data_analyzer) {
         auto nw_view = ui::NetworthView(data_analyzer->getNetworth());
         return Renderer([nw_view] {
             return vbox({
@@ -17,4 +23,7 @@ namespace ui {
           }) | border;
         });
     }
+
+
+
 }

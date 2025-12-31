@@ -20,7 +20,7 @@ FetchContent_MakeAvailable(ftxui)
 
 qt_standard_project_setup()
 file(GLOB_RECURSE CORE_SOURCES "src/core/*.cpp" "src/core/*.h")
-file(GLOB_RECURSE UI_SOURCES "src/ui/*.cpp" "src/ui/*.hpp" "src/ui/sections/*.hpp" "src/ui/sections/*.cpp")
+file(GLOB_RECURSE UI_SOURCES "src/ui/*.cpp" "src/ui/*.hpp" )
 qt_add_executable(finpilot
     ${CORE_SOURCES}
     ${UI_SOURCES}

@@ -36,6 +36,11 @@ private:
 	DataAnalysis m_analyzer;
 	DataVisualization m_visualizer;
 
+	ftxui::ScreenInteractive m_screen = ftxui::ScreenInteractive::Fullscreen();
+	std::thread m_ui_thread;
+	QTimer* m_refresh_timer = nullptr;
+	ftxui::Component m_ui_root;
+
 };
 
 #endif

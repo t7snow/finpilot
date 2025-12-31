@@ -13,7 +13,7 @@ DataAnalysis::~DataAnalysis()
 
 double DataAnalysis::getNetworth()
 {
-    return 0.0;
+    return 27.0;
 }
 
 double DataAnalysis::getSavingsRate()
