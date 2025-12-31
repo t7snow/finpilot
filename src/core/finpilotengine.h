@@ -3,7 +3,13 @@
 
 #include <QObject>
 #include <QString>
+#include <QCoreApplication>
+#include <QTimer>
+#include <thread>
+#include <ftxui/component/screen_interactive.hpp>
+#include "src/ui/dashboard.hpp"
 #include "dataloader.h"
+#include "src/ui/dashboard.hpp"
 #include "dataanalysis.h"
 #include "datavisualization.h"
 #include "financialdata.h"

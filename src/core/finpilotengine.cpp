@@ -11,9 +11,24 @@ FinPilotEngine::FinPilotEngine(const QString &db_path, const QString &config_pat
 FinPilotEngine::~FinPilotEngine()
 {
 }
-
+//TODO: make it so the shits are member variables
 void FinPilotEngine::initialize(const QString &file_path)
 {
+
+	 auto screen = ftxui::ScreenInteractive::Fullscreen();
+    auto root = ui::Dashboard(&m_analyzer);
+
+    std::thread qt_thread([&]() {
+        screen.Loop(root);
+    });
+
+    QTimer timer;
+    QObject::connect(&timer, &QTimer::timeout, [&]() {
+        screen.PostEvent(ftxui::Event::Custom); 
+    });
+    timer.start(1000);
+
+
 	m_loader.parseIncome(file_path);	
 	DateRange date;
 	date.start = QDate(2021,12,31);
