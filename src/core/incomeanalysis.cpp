@@ -29,7 +29,7 @@ double IncomeAnalysis::getTotal(const DateRange& range, IncomeMetric metric) con
 	}
     return total;
 }
-
+//TODO: Not actually using the date range
 double IncomeAnalysis::getAverage(const DateRange& range, Granularity grain, IncomeMetric metric) const {
 	double total = getTotal(range, metric);
 	int dividend = 0;
@@ -98,4 +98,14 @@ double IncomeAnalysis::getIncomeStabilityScore(const DateRange& range) const {
 }
 
 QList<IncomeEntry> IncomeAnalysis::getIncomeForRange(const DateRange& range) const {
+		
+	QList<IncomeEntry> list;
+
+	for(IncomeEntry entry : m_income_data->getIncome()){
+			if(entry.date > range.end || entry.date < range.start) {
+				list.append(entry);
+			}
+		}
+
+		return list;
 }

@@ -65,7 +65,7 @@ void DataLoader::parseExpenses(const QString &file_path)
 }
 void DataLoader::parseIncome(const QString &file_path)
 {
-	QFile file("/Users/tuckersnow/projects/finpilot/test-data/income.csv");
+	QFile file("/Users/tuckersnow/projects/finpilot/tests/income.csv");
 	if(!file.open(QIODevice::ReadOnly)){
 		qInfo() << file.errorString();
 		return;
