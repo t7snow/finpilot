@@ -1,29 +1,21 @@
-#ifdef VISUALS_H
+#ifndef VISUALS_H
 #define VISUALS_H
 
 
+#include <ftxui/dom/elements.hpp>
+#include <ftxui/component/component.hpp>
+#include <string>
+#include <QDate>
+#include "src/core/dataanalysis.h"
+
+using namespace ftxui;
+
 namespace ui {
-  using namespace ftxui;
 
-  ftxui::Component NetworthView(double networth){
-    return Renderer([networth]{
-      return window(text("Networth"), text("$" + std::to_string(networth)));
-    });
-  }
+  ftxui::Element DateControlView(DateRange *range);
 
-  ftxui::Component Dashboard(DataAnalysis *data_analyzer) {
-        auto nw_view = ui::NetworthView(data_analyzer->getNetworth());
-        return Renderer([nw_view] {
-            return vbox({
-              nw_view->Render(),
-              hbox({
-                frame(window(text("test"),text("accounts")) | flex),
-                frame(window(text("conaccountstrols"),text("accounts")) | flex)
-              }),
-          }) | border;
-        });
-    }
-
-
+  ftxui::Element NetworthView(double networth);
 
 }
+
+#endif

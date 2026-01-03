@@ -7,12 +7,13 @@
 #include <QTimer>
 #include <thread>
 #include <ftxui/component/screen_interactive.hpp>
-#include "src/ui/dashboard.hpp"
-#include "dataloader.h"
-#include "src/ui/dashboard.hpp"
+#include <ftxui/dom/elements.hpp>
+#include <ftxui/component/component.hpp>
+#include "src/ui/visuals.h"
 #include "dataanalysis.h"
 #include "datavisualization.h"
 #include "financialdata.h"
+#include "dataloader.h"
 
 class FinPilotEngine : public QObject {
 	Q_OBJECT
@@ -35,6 +36,7 @@ private:
 	DataLoader m_loader;
 	DataAnalysis m_analyzer;
 	DataVisualization m_visualizer;
+	DateRange m_active_date_range;
 
 	ftxui::ScreenInteractive m_screen = ftxui::ScreenInteractive::Fullscreen();
 	std::thread m_ui_thread;
