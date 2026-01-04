@@ -21,27 +21,28 @@ FinPilotEngine::~FinPilotEngine()
 void FinPilotEngine::initialize(const QString &file_path) {
   m_loader.parseIncome(file_path);
 
+  auto date_controls = ui::DateControlView(&m_active_date_range);
 
-  auto m_ui_root = ftxui::Renderer([this] {
-		auto nw_view = ui::NetworthView(m_analyzer.getNetworth());
-		auto date_controls = ui::DateControlView(&m_active_date_range);
+  m_ui_root = ftxui::Renderer(date_controls, [this, date_controls] {
+    
+    auto nw_view = ui::NetworthView(m_analyzer.getNetworth());
 
-		return ftxui::vbox({
-			ftxui::hbox({
-				nw_view | ftxui::flex,
-				date_controls | ftxui::flex
-
-			}),
-			ftxui::hbox({
-				ftxui::window(ftxui::text("Accounts"), ftxui::text("Checking/Savings")) | ftxui::flex,
-				ftxui::window(ftxui::text("Controls"), ftxui::text("Q: Quit | R: Refresh")) | ftxui::flex
-			})
-		}) | ftxui::border;
+    return ftxui::vbox({
+      ftxui::hbox({
+        nw_view | ftxui::flex,
+        
+        date_controls->Render() | ftxui::flex 
+      }),
+      ftxui::hbox({
+        ftxui::window(ftxui::text("Accounts"), ftxui::text("Checking/Savings")) | ftxui::flex,
+        ftxui::window(ftxui::text("Controls"), ftxui::text("Q: Quit | R: Refresh")) | ftxui::flex
+      })
+    }) | ftxui::border;
   });
 
-	m_ui_thread = std::thread([this, m_ui_root]() {
-  	m_screen.Loop(m_ui_root);
-	});
+  m_ui_thread = std::thread([this]() {
+    m_screen.Loop(m_ui_root);
+  });
 
   m_refresh_timer = new QTimer(this);
   connect(m_refresh_timer, &QTimer::timeout, this, [this]() {
